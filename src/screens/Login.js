@@ -162,7 +162,11 @@ fetch(Ip+"/UserSignup",{
 })
 }
         
- 
+const [session,setSession] = useState(true)
+const handler = () =>{
+    console.log("hi")
+    setSession(!(session))
+}
   
  
  
@@ -175,7 +179,7 @@ fetch(Ip+"/UserSignup",{
               
       </Helmet>
 
-    <div className='login_page_back_'>
+   {/* <div className='login_page_back_'>
         <div className='login_header_ row m-0'>
             <div className='text-center col-12'>
                 <img className='img-fluid' src={Chef} style={{overflow:"hidden"}} width="220" />
@@ -272,6 +276,70 @@ fetch(Ip+"/UserSignup",{
         </div>
         
          
+    </div>*/}
+     <div>
+        {session ?<>
+            <div className='container-fluid '>
+                <div className='mt-5'>
+                <h1>Login</h1>
+                <p className='m-0 p-0 fw-light'>Please sign in to continue.</p>
+                </div>
+
+                <div className='mt-4'>
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control log_inp" id="floatingInput" placeholder="name@example.com"  required value={Number} onChange={(e)=>setNumber(e.target.value)}/>
+                      <label for="floatingInput"><label className='me-2'><i class="bi bi-envelope-at"></i></label>Email address</label>
+                    </div>
+                    <div class="form-floating mt-3">
+                      <input type="password" class="form-control log_inp" id="floatingPassword" placeholder="Password" required value={Password} onChange={(e)=>setPassword(e.target.value)}/>
+                      <label for="floatingPassword"><label className='me-2'><i class="bi bi-shield-lock-fill"></i></label>Password</label>
+                    </div>                
+                </div>
+
+                <div className='row mt-5'>
+                    <div className='col-12 text-end'>
+                        <button className='login_btn py-2 px-4' onClick={sendCred}>Signin <i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div className='align-center'>
+                    <p className=' p-0 footer' >Don't have an account? <span className='fw-bold text-warning' onClick={handler}>Signup</span></p>
+                </div>
+            </div>
+        </>:<>
+            <div className='container-fluid'>
+                <h1 className='m-0 p-0 my-4 ms-3' onClick={handler}><i class="bi bi-arrow-left-circle"></i></h1>
+                <h1 className='m-0 p-0'>Create Account</h1>
+                <div className='mt-4'>
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control log_inp" id="floatingInput" placeholder="name"  value={Name} onChange={(e)=>setName(e.target.value)}/>
+                      <label for="floatingInput"><label className='me-2'><i class="bi bi-person"></i></label>Username</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control log_inp" id="floatingInput" placeholder="name@example.com" required value={Number} onChange={(e)=>setNumber(e.target.value)}/>
+                      <label for="floatingInput"><label className='me-2'><i class="bi bi-envelope-at"></i></label>Email address</label>
+                    </div>
+                    <div class="form-floating mt-3">
+                      <input type="password" class="form-control log_inp" id="floatingPassword" placeholder="Password"/>
+                      <label for="floatingPassword"><label className='me-2'><i class="bi bi-shield-lock-fill" required value={Password} onChange={(e)=>setPassword(e.target.value)}></i></label>Password</label>
+                    </div>  
+                    {/*<div class="form-floating mt-3">
+                      <input type="password" class="form-control log_inp" id="floatingPassword" placeholder="Password"/>
+                      <label for="floatingPassword"><label className='me-2'><i class="bi bi-shield-lock-fill"></i></label>Confirm Password</label>
+        </div> */}              
+                </div>
+
+                <div className='row mt-5'>
+                    <div className='col-12 text-end'>
+                        <button className='login_btn py-2 px-4' onClick={signup}>Signup<i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div className='align-center'>
+                    <p className=' p-0 footer' >Already have an account? <span className='fw-bold text-warning' onClick={handler}>Signin</span></p>
+                </div>
+            </div>
+        </>}
     </div>
     {Temp?
     <TransLoader/>:null
