@@ -6,9 +6,6 @@ import React,{useState,useEffect, Suspense} from 'react'
  
 import {Ip} from '../constants/Ip'
 import { useNavigate } from 'react-router-dom';
- 
- 
-
 import  '../css/loginstyles.css'
 import { authentication ,database } from '../firebase';
 import { RecaptchaVerifier , signInWithPhoneNumber, getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
