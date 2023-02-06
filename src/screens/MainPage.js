@@ -195,7 +195,7 @@ if(userid){
             </div>
             <div className='row pb-4 m-0'>
               <div className='col-12 text-center m-0'>
-                <input className='p-1' style={{width:"95%",border:"1px solid lightgray",borderRadius:"25px"}} placeholder="Search reastaruents" value={Place} onChange={(e)=>setPlace(e.target.value)}/>
+                <input className='p-1' style={{width:"95%", height:"160%" ,border:"1px solid lightgray",borderRadius:"10px"}} placeholder="Search Your Favourite Food" value={Place} onChange={(e)=>setPlace(e.target.value)}/>
               </div>
             </div>
 </section>

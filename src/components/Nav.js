@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-import Logo from '../images/H LOGO copy.png'
+import Logo from '../images/infalogo.jpeg';
 import { NavLink } from 'react-router-dom';
 import cart from '../images/shopping-cart.png'
 import '../css/Navstyle.css'
-import logo from '../images/LOGO TEXT copy.png'
+import logo from '../images/infalogo.jpeg'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 //import cart from '../lotties/lf30_editor_t5ofq8tc (1).json';
 import { InAction,DeAction ,RemoveAll,QuantityAdd} from './../screens/redux/actions';
