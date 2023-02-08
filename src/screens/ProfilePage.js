@@ -376,7 +376,7 @@ let user =[]
               <div className='col-6 text-right'>
                   <div className='col-12' >
                   <a
-        href="https://wa.me/934746002"
+        href="https://wa.me/9347486002"
         class="whatsapp_float"
         target="_blank"
         rel="noopener noreferrer"
