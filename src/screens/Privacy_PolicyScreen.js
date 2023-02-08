@@ -8,15 +8,15 @@ function Privacy_PolicyScreen() {
         <Nav/>
         <div className='container mt-3 mb-5' style={{padding:"70px 0 64px 0"}} >
             <h5 className='text-center'>PRIVACY POLICY</h5>
-            <p className='mt-4 ml-3 mb-0'>Effective date: October 5, 2022,</p>
-            <p className='mt-4 ml-3'>Last updated on: October 5, 2022</p>
+            <p className='mt-4 ml-3 mb-0'>Effective date: FEBRUARY 8, 2023,</p>
+            <p className='mt-4 ml-3'>Last updated on:FEBRUARY 8, 2023</p>
             <dl className='ml-3'>
                 <dt  >1.GENERAL</dt>
                 <dd>
 
                     <ol type='a'>
 
-                        <li>This Mobile Application with the name of My HomeDel ("App/My HomeDel") is operated by Trigovex Technologies Private Limited("/We/Our/Us"). We are committed to protecting and respecting your privacy. We do collect your personal information and process your personal data in accordance with the IT Act, 2000 (21 of 2000) and other national and state laws which relate to the processing of personal data. Please read the following carefully to understand our views and practices regarding your personal data.</li>
+                        <li>This Mobile Application with the name of INFA DELIVERY ("App/Website") is operated by Trigovex Technologies Private Limited("/We/Our/Us"). We are committed to protecting and respecting your privacy. We do collect your personal information and process your personal data in accordance with the IT Act, 2000 (21 of 2000) and other national and state laws which relate to the processing of personal data. Please read the following carefully to understand our views and practices regarding your personal data.</li>
                          <li>Downloading, accessing, or otherwise using the App indicates that you have read this Privacy Policy and consent to its terms. If you do not consent to the terms of this Privacy Policy, do not proceed to download, access, or otherwise use the App.</li>`
                     
                         <li>We collect your personal information in order to provide and continually improve our products and services.</li>
@@ -195,15 +195,14 @@ function Privacy_PolicyScreen() {
 
             <div className='container mt-3 ml-0'>
                 <p style={{fontWeight:'bold'}}>Contact Details:</p>
-                <p>Name: P V L M Pavan Kumar</p>
-                <p>Ph:7013325735</p>
-                <p>Email: myhomedel2022@gmail.com</p>
-                <p>Address: Near Old Age Home, </p>
-                <p>Dno-4-44 near sub register office </p>
-                <p>c/o pavan communications palakollu  </p>
+                <p>Name: MADDELA HARI KIRAN</p>
+                <p>Ph:9347486002</p>
+                <p>Email: infadelivery@gmail.com</p>
+                <p>Address: Yerramsetti Vari Palem, </p>
+                <p>Near Telagamsetti vari meraka </p>
                 <p>West Godvari, </p>
                 <p>Andhra Pradesh,</p>
-                <p>534260</p>
+                <p>534275</p>
                  
             </div>
         </div>
