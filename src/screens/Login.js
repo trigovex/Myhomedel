@@ -285,7 +285,7 @@ const handler = () =>{
                 <div className='mt-4'>
                     <div class="form-floating mb-3">
                       <input type="email" class="form-control log_inp" id="floatingInput" placeholder="name@example.com"  required value={Number} onChange={(e)=>setNumber(e.target.value)}/>
-                      <label for="floatingInput"><label className='me-2'><i class="bi bi-envelope-at"></i></label>Email address</label>
+                      <label for="floatingInput"><label className='me-2'><i class="bi bi-envelope-at"></i></label>Mobile Number</label>
                     </div>
                     <div class="form-floating mt-3">
                       <input type="password" class="form-control log_inp" id="floatingPassword" placeholder="Password" required value={Password} onChange={(e)=>setPassword(e.target.value)}/>
