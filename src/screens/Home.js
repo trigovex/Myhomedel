@@ -2,7 +2,7 @@
  
  function Home() {
    return (
-     <div>Sakth</div>
+     <div>Saketh</div>
    )
  }
  
