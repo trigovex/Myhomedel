@@ -64,6 +64,7 @@ const  GetData = async ()=>{
  
     
   setData(data)
+  console.log(data)
  
   
  }
@@ -127,7 +128,7 @@ if(userid){
     <header className='header_ d-lg-block d-none'>
 
 <nav class="container navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="#">My Homedel</a>
+  <a class="navbar-brand" href="#">INFA DELIVERY</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -216,7 +217,7 @@ if(userid){
       <Recom Place={Place}/>
       </div>
   <div className='col'>
-  <h2 className='mt-5'>Restaurants Near Palakollu</h2>
+  <h2 className='mt-5'>Restaurants Near Narsapuram</h2>
   <RestaurentCard User={Data} Place={Place} user={Data} /> 
 
 
