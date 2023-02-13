@@ -146,11 +146,11 @@ if(userid){
 </nav>
 
 <div className='brand_ mt-5'>
-    <h1 className='text-center' style={{color:'white'}}>My Homedel</h1>
+    <h1 className='text-center' style={{color:'white'}}>INFA DELIVERY</h1>
 </div>
 
 <div className='des_ text-center mt-5'  >
-    <h3 style={{color:"white"}}>Discover the best food & drinks in Hyderabad</h3>
+    <h3 style={{color:"white"}}>Discover the best food & drinks in Narsapuram</h3>
 </div>
 
 
@@ -181,7 +181,7 @@ if(userid){
 <section className='d-lg-none d-block mb-3'  style={{position:"sticky",top:"0",zIndex:"30",width:"100%",height:"auto",borderBottomLeftRadius:"15px",borderBottomRightRadius:"15px",backgroundColor:"white"}}>
             <div className='d-flex justify-content-between align-items-center mx-3 mb-3 pt-3'>
               <div>
-                <p className='m-0' style={{fontFamily:'Lora  serif'}}>Delivery to,</p>
+                <p className='m-0' style={{fontFamily:'Lora  serif'}}>Good Morning,</p>
                  {Data.length>0?<p className='m-0 font-weight-bold font-size-large'>{Data[0].Name}</p>:null}
               </div>
                <NavLink to="/Profile"><div>
@@ -203,7 +203,7 @@ if(userid){
  
  <Baners/>
  <div className='container mt-4'>
-     <h2>Category</h2>
+     <h2>Categories</h2>
      <Cat/>
      </div>
     <div className='container mt-4'>
