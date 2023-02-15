@@ -1,7 +1,7 @@
 import React from 'react'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
  
-import Lodi from '../lotties/99680-3-dots-loading.json'
+import Lodi from '../lotties/99276-loading-utensils.json'
 
 function TransLoader() {
   return (
