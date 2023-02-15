@@ -4,7 +4,7 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 import {useNavigate} from "react-router-dom";
 
-import Lodi from '../lotties/112469-fast-delivery (1).json'
+import Lodi from '../lotties/screenloading.json'
   
 import {Helmet} from "react-helmet";
 import logo from '../images/logo.jpeg'
@@ -14,7 +14,7 @@ function Loading() {
     useEffect(() => {
         const timer = setTimeout(() => {
           navigate('Login');
-        }, 5000);
+        }, 6000);
         return () => clearTimeout(timer);
       }, []);
 
