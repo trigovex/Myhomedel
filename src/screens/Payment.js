@@ -14,12 +14,17 @@ import { useEffect } from 'react';
 import Comp_for_home from '../components/Comp_for_home';
 import TransLoader from '../components/TransLoader';
 import Loading from './Loading';
- 
+import sound from '../assets/sound.wav';
 import '../css/PaymentApplication.css'
 import { onValue } from 'firebase/database';
 
 
 function Payment(props) {
+
+  function play()
+  {
+    new Audio(sound).play()
+  }
       const {local_variable,DeAction,RemoveAll,QuantityAdd} =props;
 
 
