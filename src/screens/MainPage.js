@@ -250,5 +250,3 @@ const mapStateToProps = state =>({
   local_variable :state.item
 })
 export default connect(mapStateToProps,{InAction,DeAction,RemoveAll})(MainPage);
-
-//Palakolu

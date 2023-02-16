@@ -1,6 +1,6 @@
 .log_inp{
   border: none;
-  border-bottom: 1px solid orange;
+  border-bottom: 1px solid #24B4ADFF;
 }
 .log_inp:focus{
   outline: none;
@@ -9,7 +9,7 @@
 }
 .login_btn{
   border: none;
-  background:linear-gradient(to right bottom,white,orange);
+  background:linear-gradient(to right bottom,white,#24B4ADFF);
   font-size: 24px;
   border-radius: 25px;
   color: white;

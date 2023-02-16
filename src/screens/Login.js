@@ -130,7 +130,6 @@ fetch(Ip+"/UserSignup",{
   
     "PhoneNumber":'+91'+Number,
     "Password":Password,
-    "email":Email,
     "Name":Name,
     "Role":"Customer",
     "Address":"",
@@ -313,8 +312,8 @@ const handler = () =>{
                       <label for="floatingInput"><label className='me-2'><i class="bi bi-person"></i></label>Username</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input type="email" class="form-control log_inp" id="floatingInput" placeholder="name@example.com" required value={Number} onChange={(e)=>setNumber(e.target.value)}/>
-                      <label for="floatingInput"><label className='me-2'><i class="bi bi-envelope-at"></i></label>Email address</label>
+                      <input type="text" class="form-control log_inp" id="floatingInput" placeholder="name@example.com" required value={Number} onChange={(e)=>setNumber(e.target.value)}/>
+                      <label for="floatingInput"><label className='me-2'><i class="bi bi-envelope-at"></i></label>Enter Mobile Number</label>
                     </div>
                     <div class="form-floating mt-3">
                       <input type="password" class="form-control log_inp" id="floatingPassword" placeholder="Password"/>
@@ -333,7 +332,7 @@ const handler = () =>{
                 </div>
 
                 <div className='align-center'>
-                    <p className=' p-0 footer' >Already have an account? <span className='fw-bold text-warning' onClick={handler}>Signin</span></p>
+                    <p className=' p-0 footer'>Already have an account? <span className='fw-bold text-warning' onClick={handler}>Signin</span></p>
                 </div>
             </div>
         </>}
