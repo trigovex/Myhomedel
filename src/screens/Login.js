@@ -308,7 +308,7 @@ const handler = () =>{
                 <h1 className='m-0 p-0'>Create Account</h1>
                 <div className='mt-4'>
                     <div class="form-floating mb-3">
-                      <input type="email" class="form-control log_inp" id="floatingInput" placeholder="name"  value={Name} onChange={(e)=>setName(e.target.value)}/>
+                      <input type="text" class="form-control log_inp" id="floatingInput" placeholder="name"  value={Name} onChange={(e)=>setName(e.target.value)}/>
                       <label for="floatingInput"><label className='me-2'><i class="bi bi-person"></i></label>Username</label>
                     </div>
                     <div class="form-floating mb-3">
