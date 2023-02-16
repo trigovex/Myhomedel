@@ -6,13 +6,16 @@ import React,{useState,useEffect, Suspense} from 'react'
  
 import {Ip} from '../constants/Ip'
 import { useNavigate } from 'react-router-dom';
+ 
+ 
+
 import  '../css/loginstyles.css'
 import { authentication ,database } from '../firebase';
 import { RecaptchaVerifier , signInWithPhoneNumber, getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
 
 import {getDatabase, ref, set , onValue, child, get, push, update  } from "firebase/database";
 
-import Chef from '../images/LOGO.png'
+import Chef from '../images/infalogo.jpeg'
 import { provider } from './../firebase';
 import { Button } from 'antd';
  
@@ -130,6 +133,7 @@ fetch(Ip+"/UserSignup",{
   
     "PhoneNumber":'+91'+Number,
     "Password":Password,
+    "email":Email,
     "Name":Name,
     "Role":"Customer",
     "Address":"",
@@ -158,11 +162,7 @@ fetch(Ip+"/UserSignup",{
 })
 }
         
-const [session,setSession] = useState(true)
-const handler = () =>{
-    console.log("hi")
-    setSession(!(session))
-}
+ 
   
  
  
@@ -175,12 +175,12 @@ const handler = () =>{
               
       </Helmet>
 
-   {/* <div className='login_page_back_'>
+    <div className='login_page_back_'>
         <div className='login_header_ row m-0'>
             <div className='text-center col-12'>
                 <img className='img-fluid' src={Chef} style={{overflow:"hidden"}} width="220" />
             </div>
-             <p  style={{fontSize:25,fontWeight:'bold',textAlign:'center'}}>TRIGOVEX</p>
+             <p  style={{fontSize:25,fontWeight:'bold',textAlign:'center'}}>INFA DELIVERY</p>
         </div>
 
         <div className='row'>
@@ -206,18 +206,23 @@ const handler = () =>{
             <form >
       
             <div className='row'>
-                        <label className='col-12' style={{textAlign:"left"}}>Set User Name</label>
+                        <label className='col-12' style={{textAlign:"left"}}>Name</label>
                     </div>
-                    <input type={"text"} placeholder="Enter User Name" style={{border:"1px solid gray",borderRadius:"5px",backgroundColor:"white",padding:"8px",marginBottom:"10px",width:"100%"}} value={Name} onChange={(e)=>setName(e.target.value)}/><br />
-                    
+                    <input type={"text"} placeholder="Enter Name" style={{border:"1px solid gray",borderRadius:"15px",backgroundColor:"white",padding:"8px",marginBottom:"10px",width:"100%"}} value={Name} onChange={(e)=>setName(e.target.value)}/><br />
+                  
+
+                    <div className='row'>
+                        <label className='col-12' style={{textAlign:"left"}}>Email Address</label>
+                    </div>
+                    <input type={"text"} placeholder="Enter your email" style={{border:"1px solid gray",borderRadius:"15px",backgroundColor:"white",padding:"8px",marginBottom:"10px",width:"100%"}} required value={Email} onChange={(e)=>setEmail(e.target.value)} /><br />
                     <div className='row'>
                         <label className='col-12' style={{textAlign:"left"}}>Phone Number</label>
                     </div>
-                    <input type={"number"} placeholder="Enter your phone.no" style={{border:"1px solid gray",borderRadius:"5px",backgroundColor:"white",padding:"8px",marginBottom:"10px",width:"100%"}} required value={Number} onChange={(e)=>setNumber(e.target.value)}/><br />
+                    <input type={"number"} placeholder="Enter your phone.no" style={{border:"1px solid gray",borderRadius:"15px",backgroundColor:"white",padding:"8px",marginBottom:"10px",width:"100%"}} required value={Number} onChange={(e)=>setNumber(e.target.value)}/><br />
                     <div className='row'>
                         <label className='col-12' style={{textAlign:"left"}}>Create Password</label>
                     </div>
-                    <input type={"password"} placeholder="Enter password" style={{border:"1px solid gray",borderRadius:"5px",backgroundColor:"white",padding:"8px",marginBottom:"10px",width:"100%"}} required value={Password} onChange={(e)=>setPassword(e.target.value)}/><br />
+                    <input type={"password"} placeholder="Enter password" style={{border:"1px solid gray",borderRadius:"15px",backgroundColor:"white",padding:"8px",marginBottom:"10px",width:"100%"}} required value={Password} onChange={(e)=>setPassword(e.target.value)}/><br />
                     
 
 
@@ -272,70 +277,6 @@ const handler = () =>{
         </div>
         
          
-    </div>*/}
-     <div>
-        {session ?<>
-            <div className='container-fluid '>
-                <div className='mt-5'>
-                <h1>Login</h1>
-                <p className='m-0 p-0 fw-light'>Please sign in to continue.</p>
-                </div>
-
-                <div className='mt-4'>
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control log_inp" id="floatingInput" placeholder="name@example.com"  required value={Number} onChange={(e)=>setNumber(e.target.value)}/>
-                      <label for="floatingInput"><label className='me-2'><i class="bi bi-envelope-at"></i></label>Mobile Number</label>
-                    </div>
-                    <div class="form-floating mt-3">
-                      <input type="password" class="form-control log_inp" id="floatingPassword" placeholder="Password" required value={Password} onChange={(e)=>setPassword(e.target.value)}/>
-                      <label for="floatingPassword"><label className='me-2'><i class="bi bi-shield-lock-fill"></i></label>Password</label>
-                    </div>                
-                </div>
-
-                <div className='row mt-5'>
-                    <div className='col-12 text-end'>
-                        <button className='login_btn py-2 px-4' onClick={sendCred}>Signin <i class="bi bi-arrow-right"></i></button>
-                    </div>
-                </div>
-
-                <div className='align-center'>
-                    <p className=' p-0 footer' >Don't have an account? <span className='fw-bold text-warning' onClick={handler}>Signup</span></p>
-                </div>
-            </div>
-        </>:<>
-            <div className='container-fluid'>
-                <h1 className='m-0 p-0 my-4 ms-3' onClick={handler}><i class="bi bi-arrow-left-circle"></i></h1>
-                <h1 className='m-0 p-0'>Create Account</h1>
-                <div className='mt-4'>
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control log_inp" id="floatingInput" placeholder="name"  value={Name} onChange={(e)=>setName(e.target.value)}/>
-                      <label for="floatingInput"><label className='me-2'><i class="bi bi-person"></i></label>Username</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control log_inp" id="floatingInput" placeholder="name@example.com" required value={Number} onChange={(e)=>setNumber(e.target.value)}/>
-                      <label for="floatingInput"><label className='me-2'><i class="bi bi-envelope-at"></i></label>Enter Mobile Number</label>
-                    </div>
-                    <div class="form-floating mt-3">
-                      <input type="password" class="form-control log_inp" id="floatingPassword" placeholder="Password"/>
-                      <label for="floatingPassword"><label className='me-2'><i class="bi bi-shield-lock-fill" required value={Password} onChange={(e)=>setPassword(e.target.value)}></i></label>Password</label>
-                    </div>  
-                    {/*<div class="form-floating mt-3">
-                      <input type="password" class="form-control log_inp" id="floatingPassword" placeholder="Password"/>
-                      <label for="floatingPassword"><label className='me-2'><i class="bi bi-shield-lock-fill"></i></label>Confirm Password</label>
-        </div> */}              
-                </div>
-
-                <div className='row mt-5'>
-                    <div className='col-12 text-end'>
-                        <button className='login_btn py-2 px-4' onClick={signup}>Signup<i class="bi bi-arrow-right"></i></button>
-                    </div>
-                </div>
-
-                <div className='align-center'>
-                    <p className=' p-0 footer'>Already have an account? <span className='fw-bold text-warning' onClick={handler}>Signin</span></p>
-                </div>
-            </div>
-        </>}
     </div>
     {Temp?
     <TransLoader/>:null
