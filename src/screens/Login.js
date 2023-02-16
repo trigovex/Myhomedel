@@ -145,15 +145,10 @@ fetch(Ip+"/UserSignup",{
           alert("you have Already account Please Login with that credentials")
           setForm(1);
         }
-        else if(data.Status==="Yes"){
+        else{
           console.log("Logged done");
           localStorage.setItem('user', '+91'+Number);
           navigate('/MainPage')
-
-        }
-        else{
-          alert("Server Down")
-          setForm(1);
         }
         setTemp(false);
        } catch (e) {
