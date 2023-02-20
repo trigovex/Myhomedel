@@ -7,7 +7,6 @@
   box-shadow: 0 1px 10px gray;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  background-color: white;
 }
 .land_page{
   background-color: inherit;
@@ -24,7 +23,7 @@
 .login_button_{
   font-size: 15px;
   padding: 8px;
-  background-color: #90EE90;
+  background-color: #24b4ad;
   border-radius: 10px;
   border: none;
   color: white;
@@ -36,7 +35,7 @@
   box-shadow: 0 0 10px 5px rgba(240, 128, 128, 0.5);
 }
 .login_signup_text{
-  color: #65A765;
+  color: #24b4ad;
   background-color: #E6FFE6;
   display: inline;
   padding: 10px;

@@ -36,7 +36,7 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 import OneSignal from 'react-onesignal';
 
-import Lodi from '../lotties/1786-profile.json'
+import Lodi from '../lotties/menubar.json'
 
 
 function MainPage(props) {
@@ -189,7 +189,7 @@ if(userid){
                     autoplay
                     loop
                     src={Lodi}
-                    style={{ height: '80px', width: '80px' }}
+                    style={{ height: '45px', width: '50px' }}
                 >
                    
                 </Player>    </div></NavLink>
@@ -203,21 +203,21 @@ if(userid){
  
  <Baners/>
  <div className='container mt-4'>
-     <h2>Categories</h2>
+     <h2><center>Categories</center></h2>
      <Cat/>
      </div>
     <div className='container mt-4'>
-    <h2>Top Items</h2>
+    <h2><center>Top Items</center></h2>
     <OrderByItem/> 
     </div>
     
     
       <div className='col mt-4'>
-      <h2>Must Try </h2>
+      <h2><center>Must Try</center></h2>
       <Recom Place={Place}/>
       </div>
   <div className='col'>
-  <h2 className='mt-5'>Restaurants Near Narsapuram</h2>
+  <h2 className='mt-5'><center>Near By Restaurants</center></h2>
   <RestaurentCard User={Data} Place={Place} user={Data} /> 
 
 
@@ -227,7 +227,7 @@ if(userid){
     
     
   <p className='text-center ' style={{paddingBottom:"80px"}}>
-    ©️ Copyright 2023 Trigovex Technologies Pvt. Ltd. All Rights Reserved
+    ©️ Copyright 2023 Trigovex. All Rights Reserved
     </p>
     <Comp_for_home/>
 
