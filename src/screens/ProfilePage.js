@@ -352,10 +352,10 @@ let user =[]
                       <RWebShare
                             data={{
                             text: "Web Share - GfG",
-                            url: "https:/www.myhomedel.com/ ",
-                            title: "GfG",
+                            url: "https://play.google.com/store/apps/details?id=com.infadelivery.www",
+                            title: "INFA DELIVERY",
                             }}
-                            onClick={() => console.log("shared successfully!")}
+                            onClick={() => console.log("Shared successfully!")}
                         >
                          <button style={{background:'white',border:"none",padding:"0",margin:"0"}}>  <img src='https://cdn-icons-png.flaticon.com/512/271/271228.png' className='img-fluid hover_names' width={"15"} /></button>
                      </RWebShare>
