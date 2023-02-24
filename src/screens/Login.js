@@ -14,10 +14,9 @@ import { authentication ,database } from '../firebase';
 import { RecaptchaVerifier , signInWithPhoneNumber, getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
 
 import {getDatabase, ref, set , onValue, child, get, push, update  } from "firebase/database";
-import Chef from '../images/infalogo.png'
+import Chef from '../images/infadel.jpg'
 import { provider } from './../firebase';
 import { Button } from 'antd';
- 
  
 import {Helmet} from "react-helmet";
 import TransLoader from './../components/TransLoader';
