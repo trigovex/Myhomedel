@@ -1,10 +1,10 @@
 import React,{useEffect,useState} from 'react'
-
+import sound from '../assets/Completed.wav';
 
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 import {useNavigate} from "react-router-dom";
-import Lodi from '../lotties/116385-order-confirmation.json'
+import Lodi from '../lotties/placed.json'
 import { RemoveAll } from './../screens/redux/actions';
 import { connect } from 'react-redux';
 
@@ -12,6 +12,8 @@ function OrderPlacedLoading(props) {
     const {local_variable,RemoveAll} =props;
     let navigate = useNavigate();
     useEffect(() => {
+      new Audio(sound).play();
+
         const timer = setTimeout(() => {
 
 
@@ -19,7 +21,7 @@ function OrderPlacedLoading(props) {
 
             RemoveAll()
           navigate('/PresentOrders');
-        }, 5000);
+        }, 3000);
         return () => clearTimeout(timer);
       }, []);
 

@@ -129,6 +129,110 @@ useEffect(()=>{
       ]}
     />
   );
+  const FoodCourtMenu = (
+    <Menu
+      items={[
+        {
+          key: '1',
+          label: (
+            <a  onClick={()=>setitemname("Veg Snacks")}>
+               Veg Snacks
+            </a>
+          ),
+        },
+        {
+          key: '2',
+          label: (
+            <a  onClick={()=>setitemname("Non-Veg Snacks")}>
+               Non-Veg Snacks
+            </a>
+          ),
+        },
+        {
+          key: '3',
+          label: (
+            <a  onClick={()=>setitemname("Pizzas-8Inch")}>
+               Pizzas-8Inch
+            </a>
+            
+          ),
+        },
+        {
+          key: '4',
+          label: (
+            <a  onClick={()=>setitemname("Pizzas-5Inch")}>
+               Pizzas-5Inch
+            </a>
+            
+          ),
+        },
+        {
+          key: '5',
+          label: (
+            <a  onClick={()=>setitemname("Sandwich")}>
+               Sandwich
+            </a>
+            
+          ),
+        },
+        {
+          key: '6',
+          label: (
+            <a  onClick={()=>setitemname("Special Pizzas")}>
+               Special Pizzas
+            </a>
+            
+          ),
+        },
+        {
+          key: '7',
+          label: (
+            <a  onClick={()=>setitemname("Burger")}>
+               Burger
+            </a>
+            
+          ),
+        },
+        {
+          key: '8',
+          label: (
+            <a  onClick={()=>setitemname("Combos")}>
+               Combos
+            </a>
+            
+          ),
+        },
+        {
+          key: '9',
+          label: (
+            <a  onClick={()=>setitemname("Chicken Bucket")}>
+               Chicken Bucket
+            </a>
+            
+          ),
+        },
+        {
+          key: '10',
+          label: (
+            <a  onClick={()=>setitemname("Mocktails")}>
+               Mocktails
+            </a>
+            
+          ),
+        },
+        {
+          key: '11',
+          label: (
+            <a  onClick={()=>setitemname("Milk Shakes")}>
+               Milk Shakes
+            </a>
+            
+          ),
+        },
+ 
+      ]}
+    />
+  );
 
 
 
@@ -506,7 +610,7 @@ function check(name) {
            {AdminData?
             <div className='text-center' style={{position:"fixed",bottom:local_variable.length>0?'120px':'75px',width:"100%"}}>
 
-<Dropdown overlay={AdminData.ShopType==="Restaurant"?menu:AdminData.ShopType==="Meet Shop"?MeatMenu:AdminData.ShopType==="Grocery"?GroceryMenu:AdminData.ShopType==="Vegetable Shop"?VeggiesMenu:AdminData.ShopType==="Fresh"?FreshMenu:null} placement="top" arrow={{ pointAtCenter: true }}>
+<Dropdown overlay={AdminData.ShopType==="Restaurant"?menu:AdminData.ShopType==="Meet Shop"?MeatMenu:AdminData.ShopType==="Grocery"?GroceryMenu:AdminData.ShopType==="Vegetable Shop"?VeggiesMenu:AdminData.ShopType==="Fresh"?FreshMenu:AdminData.ShopType==="Food Court"?FoodCourtMenu:nill} placement="top" arrow={{ pointAtCenter: true }}>
      <Button style={{backgroundColor:'green',borderRadius:8,color:'white',fontSize:15}}>Menu</Button>
 </Dropdown>
 </div>:null

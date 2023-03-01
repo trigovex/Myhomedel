@@ -220,7 +220,7 @@ function Payment(props) {
 
       var val = Math.floor(1000 + Math.random() * 9000);
 
-      var tax=29;
+      var tax= (sum/100)*5;
      
 
    
@@ -341,6 +341,10 @@ const [ExtraCharges,setExtraCharges]=useState(0);
       <div className='d-flex justify-content-between'>
         <p>Extra Delivery Charges: </p>
         <p className='text-danger'>₹{ExtraCharges}</p>
+      </div>
+      <div className='d-flex justify-content-between'>
+        <p>Tax: </p>
+        <p className='text-danger'>₹{tax}</p>
       </div>
       <div className='d-flex justify-content-between'>
         <p>Total Amount: </p>
