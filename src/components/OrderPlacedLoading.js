@@ -12,7 +12,6 @@ function OrderPlacedLoading(props) {
     const {local_variable,RemoveAll} =props;
     let navigate = useNavigate();
     useEffect(() => {
-      new Audio(sound).play();
 
         const timer = setTimeout(() => {
 
@@ -21,6 +20,7 @@ function OrderPlacedLoading(props) {
 
             RemoveAll()
           navigate('/PresentOrders');
+          new Audio(sound).play();
         }, 3000);
         return () => clearTimeout(timer);
       }, []);
