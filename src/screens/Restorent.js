@@ -55,7 +55,26 @@ function Restorent(props) {
    }
    )
   }
+  const [MenuData,setMenuData] = useState()
+  //console.log("hhhg")
+   const  GetMenu = async ()=>{
+      
+      
+    fetch(Ip+'/GetMenu?Id='+AdminId,{
+    
+    }).then(res=>res.json())
+    
+    .then(data=>{ 
+    
+       
+      setMenuData(data[0].MenuList);
 
+      
+          console.log("admin data  = = ",data[0].MenuList);
+     
+    }
+    )
+   }
 const [AdminData,setAdminData]=useState();
   const GetResDetails=()=>{
     fetch(Ip+'/GetAdminForRes?id='+AdminId,{
@@ -95,6 +114,7 @@ useEffect(()=>{
       console.log("done")
       
    }
+   GetMenu();
   },[])
 
 
@@ -624,9 +644,22 @@ const handleChange = (e) => {
            }
            <div className='text-center' style={{position:"fixed",bottom:local_variable.length>0?'120px':'75px',width:"100%"}}>
 
-           <Dropdown overlay={ShopType==="Restaurant"?menu:ShopType==="Meet Shop"?MeatMenu:ShopType==="Grocery"?GroceryMenu:ShopType==="Vegetable Shop"?VeggiesMenu:ShopType==="Fresh"?FreshMenu:ShopType==="Food Court"?FoodCourtMenu:null} placement="top" arrow={{ pointAtCenter: true }}>
-                <Button style={{backgroundColor:'green',borderRadius:8,color:'white',fontSize:15}}>Menu</Button>
-          </Dropdown>
+           {MenuData?
+                  <div class="btn-group dropup">
+                  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                  </button>
+                  <ul class="dropdown-menu">
+                     {MenuData.map((dat,i)=>(
+                        <li><a class="dropdown-item" onClick={()=>setitemname(dat)}>{dat}</a></li>
+   
+                     ))
+
+                     }
+                  </ul>
+                </div>:null
+
+            }
           </div>
          </div> 
          <Comp_for_home/>
