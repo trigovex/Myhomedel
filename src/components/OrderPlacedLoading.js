@@ -19,8 +19,9 @@ function OrderPlacedLoading(props) {
 
 
             RemoveAll()
+            new Audio(sound).play();
+
           navigate('/PresentOrders');
-          new Audio(sound).play();
         }, 3000);
         return () => clearTimeout(timer);
       }, []);
