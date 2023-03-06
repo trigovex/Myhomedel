@@ -220,10 +220,8 @@ function Payment(props) {
 
       var val = Math.floor(1000 + Math.random() * 9000);
 
-      var tax= (sum/100)*5;
-     
-
-   
+      var taxvalue= (sum/100)*5;
+      var tax =num.toFixed(2);
  
 
       const [Field,setField] =useState(false);
