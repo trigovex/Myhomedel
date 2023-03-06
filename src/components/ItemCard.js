@@ -79,8 +79,8 @@ function ItemCard(props) {
 </svg>
                 <span style={{color:"black"}} className="font-weight-light">362 votes</span> </p>
             <div className='row col-12  '>
-            <p className='m-0 col-md-3 col-4'>₹<s>{props.ItemPrice}</s></p>
-            <p className='m-0 col-md-2 col-6'>₹{props.DiscountPrice}</p>
+            <p className='m-0 col-md-3 col-6'>₹<s>{props.ItemPrice}</s></p>
+            <p className='m-0 col-md-2 col-4'>₹{props.DiscountPrice}</p>
             
             </div>
             <p>{props.ItemDiscription}</p>
