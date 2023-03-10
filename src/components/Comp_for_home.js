@@ -2,7 +2,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-import home from '../lotties/explore.json'
+import home from '../lotties/49921-home.json'
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import cart from '../lotties/lf30_editor_3rxawcps.json';
 import his from '../lotties/lf30_editor_ob0pijbv.json'
@@ -32,7 +32,7 @@ function Comp_for_home() {
                    
                 </Player>
 
-                        <p className='m-0' style={{color:'black'}}>Explore</p>
+                        <p className='m-0' style={{color:'black'}}>Home</p>
                     </NavLink>
                 </div>
 

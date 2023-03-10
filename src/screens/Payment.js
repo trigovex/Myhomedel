@@ -96,7 +96,7 @@ function Payment(props) {
             "CustomerName": Data.Name,
             "ContactNo": Data.PhoneNumber,
             "orderList":itemnames,
-            "Amount":total+tax+parseInt(charge),
+            "Amount":total+taxvalue+parseInt(charge),
             "CustomerAddress":AddressData,
             "CurrentLocation":"16.66-81.464",
             "OrderStatus":"Pending",
@@ -221,7 +221,6 @@ function Payment(props) {
       var val = Math.floor(1000 + Math.random() * 9000);
 
       var taxvalue= (sum/100)*5;
-      var tax =num.toFixed(2);
  
 
       const [Field,setField] =useState(false);
@@ -342,11 +341,11 @@ const [ExtraCharges,setExtraCharges]=useState(0);
       </div>
       <div className='d-flex justify-content-between'>
         <p>Tax: </p>
-        <p className='text-danger'>₹{tax}</p>
+        <p className='text-danger'>₹{taxvalue}</p>
       </div>
       <div className='d-flex justify-content-between'>
         <p>Total Amount: </p>
-        <p className='text-danger'>₹{sum+tax+parseInt(charge)+parseInt(ExtraCharges)}</p>
+        <p className='text-danger'>₹{sum+taxvalue+parseInt(charge)+parseInt(ExtraCharges)}</p>
       </div>
       
        </div>
