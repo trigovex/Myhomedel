@@ -1,5 +1,5 @@
 import React from 'react'
-import baner1 from '../images/foodbanner.png'
+import baner1 from '../images/banner1.jpg'
 import baner2 from '../images/food-banner-design-template-2a1a5a8354fdd52ce97926689e55a1fa_screen.jpg'
 import baner3 from '../images/food-delivery-app-1.webp'
 
