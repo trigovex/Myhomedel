@@ -340,7 +340,7 @@ const [ExtraCharges,setExtraCharges]=useState(0);
         <p className='text-danger'>₹{ExtraCharges}</p>
       </div>
       <div className='d-flex justify-content-between'>
-        <p>Tax: </p>
+        <p>Additional Charges: </p>
         <p className='text-danger'>₹{taxvalue}</p>
       </div>
       <div className='d-flex justify-content-between'>
